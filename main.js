@@ -240,3 +240,62 @@ const pets = [
       imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
     }
   ];
+
+  // querySelector allows us to grab HTML elements and looks for one instance
+  const app = document.querySelector("#app");
+
+
+  // FOR OF LOOP
+  // for (variable of iterable/array)
+  
+  // Loops through the array and accessing the name (key) of the pet (array of objects) to print the value
+  // for every pet of pets, go through each object
+  /* OPTION 1
+
+  for (pet of pets) {
+    console.log(pet.name);
+  }
+
+  
+
+  OPTION 2: FOR EACH
+  
+  pets.forEach((pet) => {
+    console.log(pet.name);
+  });
+
+  */
+
+  /* OPTION 3
+
+  for( setup; condition; increment) {}
+ // i = index number
+
+  for(let i = 0; i < pets.length; i++) {
+  console.log(pets[i].name)
+ }
+
+ Start at index of 0; as long as i < the length of the array; increment and keep looping
+
+  */
+
+
+let domString = "";
+
+
+  for (pet of pets) {
+    domString += `<div class="card" style="width: 18rem;">
+    <h5 class="card-header">${pet.name}</h5>
+    <img src="${pet.imageUrl}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">${pet.color}</h5>
+      <p class="card-text">${pet.specialSkill}</p>
+      <div class="card-footer text-body-secondary">
+    ${pet.type}
+  </div>
+    </div>
+  </div>`;
+  }
+  
+    // app.innerHTML  will print "Hello World!" on the page
+    app.innerHTML = domString;

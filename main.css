@@ -1,0 +1,7 @@
+.card-footer:first-letter {
+  text-transform: capitalize;
+}
+
+.card {
+  text-align: center;
+}
