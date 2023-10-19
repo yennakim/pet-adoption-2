@@ -242,7 +242,6 @@ const pets = [
   ];
 
   // querySelector allows us to grab HTML elements and looks for one instance
-  const app = document.querySelector("#app");
 
 
   // FOR OF LOOP
@@ -280,10 +279,9 @@ const pets = [
   */
 
 
-let domString = "";
 
 
-  for (pet of pets) {
+  /* for (pet of pets) {
     domString += `<div class="card" style="width: 18rem;">
     <h5 class="card-header">${pet.name}</h5>
     <img src="${pet.imageUrl}" class="card-img-top" alt="...">
@@ -296,6 +294,96 @@ let domString = "";
     </div>
   </div>`;
   }
-  
-    // app.innerHTML  will print "Hello World!" on the page
-    app.innerHTML = domString;
+  */
+    // app.innerHTML  will print the string on the page
+
+    // For every option, we want to access the property
+    const renderToDom = (pets) => {
+      let domString = "";      
+      for (pet of pets) {
+        domString += `<div class="card" style="width: 18rem;">
+        <h5 class="card-header">${pet.name}</h5>
+        <img src="${pet.imageUrl}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">${pet.color}</h5>
+          <p class="card-text">${pet.specialSkill}</p>
+          <div class="card-footer text-body-secondary">
+        ${pet.type}
+      </div>
+        </div>
+      </div>`;
+      }
+      const app = document.querySelector("#app");
+      app.innerHTML = domString;
+
+    }
+
+renderToDom(pets);
+
+const filter = (pets, typeString) => {
+  let newPetArray = [];
+
+  for(pet of pets) {
+    if(pet.type === typeString) {
+      newPetArray.push(pet);
+    }
+  }
+
+  renderToDom(newPetArray);
+}
+
+const catsBtn = document.querySelector("#catsBtn");
+const dogsBtn = document.querySelector("#dogsBtn");
+const dinsBtn = document.querySelector("#dinosBtn");
+const showAllBtn = document.querySelector("#showAllBtn");
+
+catsBtn.addEventListener("click", () => {
+  filter(pets, "cat");
+  renderToDom(newPetArray);
+})
+
+
+
+showAllBtn.addEventListener("click", () => {
+  renderToDom(pets);
+})
+
+dogsBtn.addEventListener("click", () => {
+  filter(pets, "dog");
+  renderToDom(newPetArray);
+})
+
+dinosBtn.addEventListener("click", () => {
+  filter(pets, "dino");
+  renderToDom(newPetArray);
+})
+
+// addEventListener takes 2 parameters,
+// addEventListener(eventType, function)
+
+
+// Methods are functions that you don't have to write
+
+    // FUNCTIONS
+
+    /*
+    // OPTION 1
+    function myFunction () {
+
+    }
+
+
+    // OPTION 2
+    const myFunction = (parameter) => {
+      parameter = placeholder for the data youre sending in
+    }
+
+        const myFunction = (parameter1, parameter2) => {
+      console.log(parameter1);
+      console.log(parameter2);
+    }
+    const myMessage1 = "This is my first message";
+    const myMessage2 = "This is my second message";
+    myFunction(myMessage1, myMessage2);
+
+    */
