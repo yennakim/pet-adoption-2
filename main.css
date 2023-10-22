@@ -1,7 +1,30 @@
-.card-footer:first-letter {
+body {
+  background-color: #faeee7;
+}
+
+.card-text:first-letter {
   text-transform: capitalize;
 }
 
-.card {
+.card-body {
   text-align: center;
+}
+
+
+#app {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  gap: 50px;
+  margin: 50px;
+  }
+
+.btn-outline-danger {
+  width: 100%;
+}
+
+.filterButtons {
+ display: flex;
+ justify-content: space-evenly; 
+ margin: 20px 0;
 }
