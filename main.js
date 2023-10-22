@@ -13,7 +13,7 @@ const pets = [
       color: "Brown",
       specialSkill: "Just picks the tomatoes off of a sandwich instead of requesting a whole new sandwich.",
       type: "dino",
-      imageUrl: "http://www.jozilife.co.za/wp-content/uploads/The-Dino-Expo.jpg",
+      imageUrl: "https://loremflickr.com/300/200/dino",
     },
     {
       id: 3,
@@ -61,7 +61,7 @@ const pets = [
       color: "Grey",
       specialSkill: "Comfortable in the outdoors for up to eight hours.",
       type: "dino",
-      imageUrl: "http://www.theouthousers.com/images/jck//ThanosCopter/news/grumpasaur.jpg"
+      imageUrl: "https://loremflickr.com/300/200/dinosaur"
     },
     {
       id: 9,
@@ -85,7 +85,7 @@ const pets = [
       color: "Orange",
       specialSkill: "Can be around food without staring creepily at it.",
       type: "dino",
-      imageUrl: "http://www.cantref.com/userfiles/events/walking%20dino.jpg?w=600"
+      imageUrl: "https://loremflickr.com/300/200/dinosaur"
     },
     {
       id: 12,
@@ -101,7 +101,7 @@ const pets = [
       color: "Red",
       specialSkill: "Expertly quotes and recognizes dialogue from early seasons of The Simpsons.",
       type: "dog",
-      imageUrl: "http://1kjkdg1axrkd2g03cnboj761.wpengine.netdna-cdn.com/wp-content/uploads/2017/12/braydon-anderson-105552-e1512684107659.jpg"
+      imageUrl: "https://loremflickr.com/300/200/dog"
     },
     {
       id: 14,
@@ -125,7 +125,7 @@ const pets = [
       color: "Brown",
       specialSkill: "Drives at a safe rate of speed in snow or rain.",
       type: "dino",
-      imageUrl: "https://images.readwrite.com/wp-content/uploads/2018/03/t-rex-dino-quiz-e1490854556549.jpg"
+      imageUrl: "https://loremflickr.com/300/200/dinosaur"
     },
     {
      id: 17,
@@ -133,7 +133,7 @@ const pets = [
       color: "Yellow",
       specialSkill: "Does not freak out if you haven’t seen his favorite movie (The Big Lebowski).",
       type: "cat",
-      imageUrl: "http://www.funnycatsite.com/pictures/Close_Up_Yawn.jpg"
+      imageUrl: "https://loremflickr.com/300/200/cat"
     },
     {
       id: 18,
@@ -141,7 +141,7 @@ const pets = [
       color: "Brown",
       specialSkill: "Proficient in air guitar",
       type: "dino",
-      imageUrl: "https://www.nation.co.ke/image/view/-/4078922/highRes/1742693/-/maxw/600/-/1453yvh/-/DINO.jpg"
+      imageUrl: "https://loremflickr.com/300/200/dinosaur"
     },
     {
       id: 19,
@@ -157,7 +157,7 @@ const pets = [
       color: "Black",
       specialSkill: "Uses litter box at appropriate hours.",
       type: "cat",
-      imageUrl: "http://www.funnycatsite.com/pictures/Lazy_White_Cat.jpg"
+      imageUrl: "https://loremflickr.com/300/200/cat"
     },
     {
       id: 21,
@@ -165,7 +165,7 @@ const pets = [
       color: "Red",
       specialSkill: "Owns a Nintendo Power Glove.",
       type: "dino",
-      imageUrl: "https://img.buzzfeed.com/buzzfeed-static/static/2015-11/2/12/enhanced/webdr15/anigif_enhanced-29802-1446485228-10.gif?crop=250:165;0,0&downsize=715"
+      imageUrl: "https://loremflickr.com/300/200/dinosaur"
     },
     {
         id: 22,
@@ -173,7 +173,7 @@ const pets = [
       color: "Orange",
       specialSkill: "Is comfortable with jokes about his receding hairline.",
       type: "cat",
-      imageUrl: "http://funnyanimalphoto.com/wp-content/uploads/2013/08/cat_caught_mouse_thegatewaypundit.jpg"
+      imageUrl: "https://loremflickr.com/300/200/cat"
     },
     {
         id: 23,
@@ -189,7 +189,7 @@ const pets = [
       color: "Brown",
       specialSkill: "Participates in karaoke but does not force others to go out to karaoke.",
       type: "dog",
-      imageUrl: "http://www.dogbreedplus.com/dog_breeds/images/basset-hound-4.jpg"
+      imageUrl: "https://loremflickr.com/300/200/dog"
     },
     {
       id: 25,
@@ -197,7 +197,7 @@ const pets = [
       color: "Red",
       specialSkill: "Knows the words to 4 rap songs.",
       type: "cat",
-      imageUrl: "http://funbk.s3.amazonaws.com/wp-content/uploads/2016/06/funny-cat-video-which-will-make-you-laugh-louder.jpg"
+      imageUrl: "https://loremflickr.com/300/200/cat"
     },
     {
         id: 26,
@@ -237,67 +237,13 @@ const pets = [
       color: "Red",
       specialSkill: "Doesn’t get weirded out by the word “moist.”",
       type: "dino",
-      imageUrl: "http://lsae2.iypcdn.com/static//modules/uploads/photos/language1/dino-live-22.jpg?119"
+      imageUrl: "https://loremflickr.com/300/200/dinosaur"
     }
   ];
 
-  // querySelector allows us to grab HTML elements and looks for one instance
 
+    const app = document.querySelector("#app");
 
-  // FOR OF LOOP
-  // for (variable of iterable/array)
-  
-  // Loops through the array and accessing the name (key) of the pet (array of objects) to print the value
-  // for every pet of pets, go through each object
-  /* OPTION 1
-
-  for (pet of pets) {
-    console.log(pet.name);
-  }
-
-  
-
-  OPTION 2: FOR EACH
-  
-  pets.forEach((pet) => {
-    console.log(pet.name);
-  });
-
-  */
-
-  /* OPTION 3
-
-  for( setup; condition; increment) {}
- // i = index number
-
-  for(let i = 0; i < pets.length; i++) {
-  console.log(pets[i].name)
- }
-
- Start at index of 0; as long as i < the length of the array; increment and keep looping
-
-  */
-
-
-
-
-  /* for (pet of pets) {
-    domString += `<div class="card" style="width: 18rem;">
-    <h5 class="card-header">${pet.name}</h5>
-    <img src="${pet.imageUrl}" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">${pet.color}</h5>
-      <p class="card-text">${pet.specialSkill}</p>
-      <div class="card-footer text-body-secondary">
-    ${pet.type}
-  </div>
-    </div>
-  </div>`;
-  }
-  */
-    // app.innerHTML  will print the string on the page
-
-    // For every option, we want to access the property
     const renderToDom = (pets) => {
       let domString = "";      
       for (pet of pets) {
@@ -307,13 +253,13 @@ const pets = [
         <div class="card-body">
           <h5 class="card-title">${pet.color}</h5>
           <p class="card-text">${pet.specialSkill}</p>
+          <p class="card-text"> ${pet.type}</p>
           <div class="card-footer text-body-secondary">
-        ${pet.type}
+          <button type="button" class="btn btn-outline-danger" id="delete--${pet.id}">Delete</button>
       </div>
         </div>
       </div>`;
       }
-      const app = document.querySelector("#app");
       app.innerHTML = domString;
 
     }
@@ -358,32 +304,70 @@ dinosBtn.addEventListener("click", () => {
   renderToDom(newPetArray);
 })
 
-// addEventListener takes 2 parameters,
-// addEventListener(eventType, function)
+// CREATE
 
 
-// Methods are functions that you don't have to write
+const form = document.querySelector("form");
 
-    // FUNCTIONS
+const createPet = (e) => {
+    e.preventDefault();
+  const newPetObj = {
+  
+      id: pets.length + 1,
+      name: document.querySelector("#petName").value,
+      color: document.querySelector("#petColor").value,
+      specialSkill: document.querySelector("#petSkill").value,
+      type: document.querySelector("#petType").value,
+      imageUrl: document.querySelector("#petImage").value,
 
-    /*
-    // OPTION 1
-    function myFunction () {
+  }
 
-    }
+    console.log(newPetObj.name);
+    pets.push(newPetObj);
+    console.log(pets.length);
+    renderToDom(pets);
+    form.reset();
+}
+
+form.addEventListener("submit", createPet);
 
 
-    // OPTION 2
-    const myFunction = (parameter) => {
-      parameter = placeholder for the data youre sending in
-    }
 
-        const myFunction = (parameter1, parameter2) => {
-      console.log(parameter1);
-      console.log(parameter2);
-    }
-    const myMessage1 = "This is my first message";
-    const myMessage2 = "This is my second message";
-    myFunction(myMessage1, myMessage2);
 
-    */
+
+// DELETE 
+
+
+const deletePet = (e) => {
+  // console.log(e); shows event properties; look at target property in dev tools
+
+  if(e.target.id.includes("delete")) {
+
+      // 1.  Determine which object I'm deleting by the ID (target.id)
+            // id = "delete--3"
+
+      const [, id] = e.target.id.split("--") // -- is the delineator which split the id into two strings (delete, and the id number)
+
+      // const [firstString, secondString]
+      // We don't care about the first string ("delete") and only want to grab the number (id number) which is why it is empty ([, id]); CALLED DESTRUCTURING
+
+
+      // 2. Identify where in the array that object is by the index
+      const index = pets.findIndex(obj => obj.id === Number(id));        // obj is a taco; obj.id is a number, and id is a string so we converted id into a number using Number()
+
+
+
+
+      // 3. Remove the object from the array
+      pets.splice(index, 1);
+      // Splice takes 2 parameters, first one is index, second one is the number of items to remove
+
+
+
+      // 4. Re-render with the array
+      renderToDom(pets);
+
+  }
+}
+
+app.addEventListener("click", deletePet);
